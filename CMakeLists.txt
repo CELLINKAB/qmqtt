@@ -36,7 +36,7 @@ if ( NOT ${PROJECT_NAME}_SSL)
     set( ssl_defs QT_NO_SSL )
 endif()
 
-
+find_package( QT NAMES Qt5 REQUIRED COMPONENTS Core)
 find_package( Qt5 ${qt5_min_version} COMPONENTS Core Network ${ws_component} CONFIG REQUIRED )
 set( CMAKE_AUTOMOC ON )
 cmake_policy( SET CMP0020 NEW ) # Automatically link Qt executables to qtmain target on Windows.
